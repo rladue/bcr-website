@@ -4,21 +4,79 @@
 <head>
     <meta charset="utf-8" />
     <title>Home | Blue Collar Rust</title>
-    <link rel="stylshee" href="./styles.css" />
-    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8" />
+    <link rel="icon" href="/img/favicon.jpg" type="image/x-icon">
 </head>
-<body>
-    <!--
-        Header Banner and Menu that stretch 100%
-        
-        Main Column - 75% - split into 2/3 & 1/3 columns
+
+<!-- 1280px width, everything left and right is blank
+    upload font files
+-->
+
+<body class="mainview">
+    <div class="container">
+        <div class="header">
+            <a class="banner" href="/">
+                <img src="./img/bcr-banner.png" alt="Blue Collar Rust banner" />
+            </a>
+            <div class="links">
+                <a href="https://bluecollarrust.tebex.io">Store</a>
+                <a href="">Donate</a>
+                <a href="./servers.html">Servers</a>
+                <a href="">Discord</a>
+                <a href="./report.html">Report</a>
+            </div>
+        </div>
+        <div class="page-cont">
+            <p>Test Text</p>
+            <p>Goes Here</p>
+            <!--Page container, split into two columns 2/3 and 1/3-->
+            <!--
+                Welcome, full width
+                iframes for each server - left column
+                wipe info - right column
 
 
-        Footer - full width - always floats on top
-    -->
+            -->
+        </div>
+
+        <div class="footer">
+            <div class="left-cont">
+                <img src="./img/bcr-banner.png" alt="Blue Collar Rust banner" />
+                <p>© 2024 - All rights reserved</p>
+            </div>
+            <div class="right-cont">
+                <p><a href="">About</a></p>
+                <p>Contact</p>
+            </div>
+        </div>
 
 
-
-
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+<!-- Website Hierarchy-->
+<!--
+    Home
+        - Welcome Message (All communications through discord)
+        - Widgets for each server
+        - Discord Widget
+        - Wipe Schedule
+        - Donate
+    Store
+        - Link to Tebex Page
+    Servers
+        - Server Widget & Rules for each
+    Report
+        - Create html report box that sends email / one box, selection for report player or report bug
+    About Us (Footer)
+        - Mission Statement
+        - Values and Goals
+    Donate
+        - Paypal Donate Link
+-->
