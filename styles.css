@@ -7,18 +7,17 @@
     font-style: normal;
 }
 img {
-    max-width: 100%;
+    max-width: 90%;
+}
+
+.banner-short{
+    display: none;
 }
 
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(rgba(200,200,200,0.9), rgba(200,200,200,0.9)), url('./img/keyart-1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
 }
 
 a, a:visited {
@@ -36,8 +35,8 @@ a, a:visited {
     margin: 2em 10%;
     height: auto;
     padding: 1em;
-    border-radius: 10px;
-    background-color: color-mix(in srgb, cornflowerblue 50%, transparent);
+    border-radius: 15px 15px 0px 0px;
+    background-color: color-mix(in srgb, cornflowerblue 66%, transparent);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,6 +47,10 @@ a, a:visited {
 .banner {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .links {
@@ -57,7 +60,7 @@ a, a:visited {
     display: flex;
     flex-wrap: wrap;
     gap: 3em;
-    row-gap: 0em;
+    row-gap: 0.5em;
 }
 
     .links a {
@@ -68,20 +71,69 @@ a, a:visited {
         font-family: capture-it;
         font-size: 30px;
         line-height:1em;
+        padding: 0.2em;
     }
 
     .links a:hover, .links a:active {
-        background-color: #002F6C;
+        background-color: slategrey;
         color: white;
     }
 
-.page-cont{
-    height: 100vh;
+.page-cont {
+    background-color: color-mix(in srgb, lightslategray 25%, transparent);
+    margin: -2em 10% 2em 10%;
+    padding: 2em;
+    border-radius: 0px 0px 15px 15px;
+    height: auto;
     display: flex;
     font-family: Roboto;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction:column;
 }
+
+.welcome {
+    display: flex;
+    font-family: Roboto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0em;
+}
+
+.message {
+
+}
+
+.server-widgets{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 4em;
+    row-gap: 0em;
+}
+
+    .server-widgets p {
+        font-family: capture-it;
+        font-size: 28px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-align: center;
+        width: 500px;
+        background-color: color-mix(in srgb, cornflowerblue 33%, transparent);
+        margin: 0.5;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        border-radius: 10px;
+    }
+
+    .server-widgets iframe{
+        width: 500px;
+        max-width: 95%;
+        margin-top: 10px;
+    }
 
 .footer {
     margin-top: auto;
@@ -89,7 +141,7 @@ a, a:visited {
     padding-bottom: 0.5em;
     padding-right: 10%;
     padding-left: 10%;
-    background-color: color-mix(in srgb, lightslategray 50%, transparent);
+    background-color: color-mix(in srgb, cornflowerblue 33%, transparent);
     color: black;
     font-size: 12px;
     display: flex;
@@ -104,10 +156,11 @@ a, a:visited {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        flex-shrink:1;
     }
 
     .footer .left-cont img{
-        max-width: 250px;
+        max-height: 40px;
         margin-top:0.5em;
     }
 
@@ -119,9 +172,24 @@ a, a:visited {
         align-items: center;
         font-size:14px;
         text-decoration-line: underline;
+        flex-shrink:1;
     }
 
 @media screen and (max-width: 600px) {
+.banner {
+    display: none;
+}
+
+.banner-short {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width:200px;
+}
+
 
 .links {
     margin-top: .5em;
@@ -135,7 +203,7 @@ a, a:visited {
     flex-wrap: wrap;
     flex-direction: column;
     gap: 3em;
-    row-gap: .5em;
+    row-gap: 0;
 }
 
     .links a {
@@ -144,8 +212,8 @@ a, a:visited {
         color: black;
         font-weight: 300;
         font-family: capture-it;
-        font-size: 20px;
-        line-height:0.25em;
+        font-size: 30px;
+        line-height:10px;
     }
 
 }
