@@ -6,6 +6,25 @@
     font-weight: normal;
     font-style: normal;
 }
+
+p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: capture-it, Roboto, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+
 img {
     max-width: 90%;
 }
@@ -74,7 +93,7 @@ a, a:visited {
         padding: 0.2em;
     }
 
-    .links a:hover, .links a:active {
+    .links a:hover, .links a:active, .links .active {
         background-color: slategrey;
         color: white;
     }
@@ -82,27 +101,51 @@ a, a:visited {
 .page-cont {
     background-color: color-mix(in srgb, lightslategray 25%, transparent);
     margin: -2em 10% 2em 10%;
-    padding: 2em;
+    padding: 0em 2em 2em 2em;
     border-radius: 0px 0px 15px 15px;
     height: auto;
     display: flex;
-    font-family: Roboto;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction:column;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-.welcome {
+.left-col {
     display: flex;
-    font-family: Roboto;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     row-gap: 0em;
+    flex-wrap: wrap;
+    flex:1 1 600px;
+}
+
+.right-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0em;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+}
+
+.headline {
+    text-align: center;
+    background-color: color-mix(in srgb, cornflowerblue 66%, transparent);
+    border-radius: 10px 10px 0px 0px;
+    width: 95%;
+    padding: 0.5em 1em;
+    margin: 1em 0em 0em 0em;
 }
 
 .message {
-
+    background-color: color-mix(in srgb, cornflowerblue 15%, transparent);
+    border-radius: 0px 0px 10px 10px;
+    width: 95%;
+    margin: 0em 0.5em 0em 0.5em;
+    padding: 1.5em 1em;
 }
 
 .server-widgets{
@@ -119,7 +162,7 @@ a, a:visited {
         font-family: capture-it;
         font-size: 28px;
         line-height: 30px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         font-weight: 500;
         text-align: center;
         width: 500px;
