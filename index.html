@@ -87,7 +87,7 @@
             if (firstThurs.getDay() === 4) break;
             firstThurs.setDate(firstThurs.getDate() + 1)
         }
-        if (firstThurs < today) {
+        if (firstThurs < today) { //if first thursday is in the past, start the check from the first of next month
             firstThurs = new Date(today.getFullYear(),today.getMonth()+1,1,13,0,0,0);
             firstThurs.getMonth()+1;
             for (let i=0 ; i<7 ; i++) {
@@ -105,7 +105,7 @@
             if (thirdThurs.getDay() === 4) break;
             thirdThurs.setDate(thirdThurs.getDate() + 1)
         }
-        if (thirdThurs < today) {
+        if (thirdThurs < today) { //if third thursday is in the past, start the check from the 15th of next month
             thirdThurs = new Date(today.getFullYear(),today.getMonth()+1,15,13,0,0,0);
             thirdThurs.getMonth()+1;
             for (let i=1 ; i<7 ; i++) {
@@ -120,6 +120,9 @@
         const today = new Date(Date.now());
         let fifthThurs = new Date(today.getFullYear(),today.getMonth(),29,13,0,0,0);
         while (fifthThurs.getDay() !== 4) {
+            //if "fifth" thursday is actually the first thursday of the next month (i.e. not a number between 29-31)
+            //then the date is now in a new month, so set the date to the 29th of that new month and 
+            //repeat until a real fifth thursday has been found.
             if (fifthThurs.getDate() < 29) {
                 fifthThurs = new Date(fifthThurs.getFullYear(),fifthThurs.getMonth(),29,13,0,0,0);
             }
@@ -131,7 +134,7 @@
         return fifthThurs;
     }
 
-    function nextWipe() {
+    function nextWipe() { //compare Thursdays and current day to return soonest upcoming wipe
         const today = new Date(Date.now());
         let day = new Date(today.getFullYear(),today.getMonth(),today.getDate(),13,0,0,0);
         let firstThurs = getFirstThurs();
