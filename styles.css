@@ -24,6 +24,15 @@ h1 {
     letter-spacing: 2px;
 }
 
+h2 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 1em;
+    padding: 0;
+    text-decoration: underline;
+}
+
 
 img {
     max-width: 90%;
@@ -91,6 +100,7 @@ a, a:visited {
         font-size: 30px;
         line-height:1em;
         padding: 0.2em;
+        letter-spacing: 2px;
     }
 
     .links a:hover, .links a:active, .links .active {
@@ -146,6 +156,10 @@ a, a:visited {
     border-radius: 0px 0px 10px 10px;
     width: 95%;
 
+}
+
+.right-col .message{
+    text-align: center;
 }
 
 .server-widgets{
@@ -257,6 +271,7 @@ a, a:visited {
         font-family: capture-it;
         font-size: 30px;
         line-height:10px;
+        letter-spacing: 2px;
     }
 
 }
