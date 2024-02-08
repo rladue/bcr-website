@@ -246,7 +246,35 @@ a, a:visited {
     margin: 1em;
 }
 
+.report-form{
+    display:flex;
+    justify-content: center;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
 
+.form-row {
+    margin-bottom: 10px;
+}
+
+#contact-form-message {
+    width: 400px;
+    float:inline-end;
+}
+
+.form-error {
+    color: red;
+}
+
+button {
+    max-width:50px;
+    align-self: center;
+}
 
 
 @media screen and (max-width: 600px) {
