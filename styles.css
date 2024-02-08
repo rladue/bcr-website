@@ -168,16 +168,36 @@ a, a:visited {
     flex-wrap: wrap;
 }
 
-.server-widgets p{
-    width:250px;
+.server-desc{
+    width:100%;
     flex: 1 1 auto;
 }
 
-.server-widgets .server-banner{
+    .server-desc p {
+        font-family: Roboto;
+        font-size: 16px;
+    }
+
+.server-feat{
+    width:60%;
+    flex: 1 1 600px;
+}
+
+.server-banner{
     text-align: center;
     padding: 1em;
-    width:50%;
+    width:40%;
     flex: 1 1 400px;
+    min-width: none;
+}
+
+.ul, li {
+    font-family: Roboto;
+    font-size: 14px;
+    margin: 1em;
+    padding: 0;
+    line-height: 18px;
+    margin: 2px;
 }
 
 .footer {
@@ -226,6 +246,9 @@ a, a:visited {
     margin: 1em;
 }
 
+
+
+
 @media screen and (max-width: 600px) {
 .banner {
     display: none;
@@ -240,7 +263,6 @@ a, a:visited {
         align-items: center;
         max-width:200px;
 }
-
 
 .links {
     margin-top: .5em;
