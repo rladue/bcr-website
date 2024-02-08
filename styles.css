@@ -277,7 +277,7 @@ button {
 }
 
 
-@media screen and (min-width: 450px) {
+@media screen and (max-width: 1200px) {
 .banner {
     display: none;
 }
