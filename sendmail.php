@@ -1,5 +1,14 @@
 <?php
 
+if($_POST["message"]) {
+
+mail("blucollarrust@gmail.com", "Here is the subject line",
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+}
+
+/*
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $username = $_POST["username"];
     $server = $_POST["server"];
@@ -22,5 +31,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'alert("Failed to send message")';
         echo '</script>';
     }
-}
+}*/
 ?>
