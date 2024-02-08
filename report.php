@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Report | Blue Collar Rust</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="styles.css?1" type="text/css" charset="utf-8" />
     <link href="./img/favicon-light.png" rel="icon" media="(prefers-color-scheme: light)">
     <link href="./img/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)">
 </head>
