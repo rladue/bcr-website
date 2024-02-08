@@ -1,9 +1,44 @@
-﻿<!DOCTYPE html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(
+        !empty($_POST['username'])
+        && !empty($_POST['server'])
+        && !empty($_POST['issue'])
+        && !empty($_POST['message'])
+    ){
+        $username = $_POST["username"];
+        $server = $_POST["server"];
+        $issue = $_POST["issue"];
+        $message = $_POST["message"];
+
+
+        $to = "bluecollarrust@gmail.com";
+        $subject = "BlueCollarRust.com Report Submission";
+        $body = "Name: {$username}\n\nServer: {$server}\n\nIssue Type: {$issue}\n\nMessage: {$message}";
+        $headers = "From: {$username}";
+
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo '<script language="javascript">';
+            echo 'alert("message successfully sent")';
+            echo '</script>';
+        } else {
+            echo '<script language="javascript">';
+            echo 'alert("message successfully sent")';
+            echo '</script>';
+            echo "Failed to send message.";
+        }
+    }
+}
+?>
+
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Home | Blue Collar Rust</title>
+    <title>Report | Blue Collar Rust</title>
     <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8" />
     <link href="./img/favicon-light.png" rel="icon" media="(prefers-color-scheme: light)">
     <link href="./img/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)">
@@ -23,29 +58,57 @@
                 <a href="https://paypal.me/BlueCollarRust?country.x=US&locale.x=en_US">DONATE</a>
                 <a href="./servers.html">SERVERS</a>
                 <a href="https://discord.gg/Y3kqB49">DISCORD</a>
-                <a href="./report.php">REPORT</a>
+                <a class="active" href="./report.php">REPORT</a>
             </div>
         </div>
         <div class="page-cont">
             <div class="left-col">
                 <div class="headline">
-                    <h1>WELCOME</h1>
+                    <h1>REPORT</h1>
                 </div>
                 <div class="message">
-                    <p>Blue Collar Rust is geared toward those who want to play Rust at a more casual pace without having to worry about losing everything when logging off for the night or if they take a day or two off from the game. We strive to keep our servers toxic free and to build a fun and engaging community.</p>
-                    <p>Our servers wipe every two weeks, except for when there are five Thursdays in a month. The 1st Thursday of each month is a map and BP wipe, while the 3rd and 5th Thursday's are map-only wipes.</p>
-                </div>
-                <div class="headline">
-                    <h1>JOIN OUR COMMUNITY</h1>
-                </div>
-                <div class="message">
-                    <p>All official communication, including news and events, is disseminated through the Blue Collar Rust Discord server. Players are encrouaged to join our online community on Discord.</p>
-                    <p>The BCR Discord server is the best place for members to provide feedback and to interact with other players both in Rust, and in our other game servers that we provide.</p>
-                    <div class="widgetbot">
-                        <widgetbot server="652038839032086548" channel="652381455330050068" width="100%" height="500px">
-                        </widgetbot>
-                        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-                    </div> 
+                    <span style="text-align: center; font-weight: 700; font-size: 16px;">
+                        <p>The best place to report a problem is through the Help Desk channel on our Discord server.</p>
+                        <div class="widgetbot">
+                            <widgetbot server="652038839032086548" channel="1115702748705460374" width="100%" height="400px">
+                            </widgetbot>
+                            <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+                        </div> 
+                        <p><br />However, you can also fill out the form below to report a player's behavior or to report a problem.</p>
+                    </span><br />
+                    <div class="report-form">
+                        <form class="contact-form" method="POST" action="report.php">
+                            <div class="form-row form-error" style="display:none;"></div>
+                            <div class="form-row">
+                              <label for="contact-form-name">Your Username:</label>
+                                <input  placeholder="Steam Username" id="contact-form-name" class="form-input" type="text" name="username" required>
+                            </div>
+                            <div class="form-row">
+                                <label for="server">Server:</label>
+                                <select name="server" id="server" required>
+                                    <option value="">--- Select a server ---</option>
+                                    <option value="original">Original PvPvE</option>
+                                    <option value="lite">Lite PvE</option>
+                                    <option value="brickyard">Brickyard PvP</option>
+                                    <option value="reserved">Reserved Sandbox/Build</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="issue">Issue:</label>
+                                <select name="issue" id="issue" required>
+                                    <option value="">--- Select an option ---</option>
+                                    <option value="behavior">Player(s) Behavior</option>
+                                    <option value="glitch">Problem / Glitch</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="contact-form-message">Message:</label>
+                            <textarea placeholder="Describe the issue" id="contact-form-message" class="form-input" name="message" required></textarea>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="right-col">

@@ -1,3 +1,38 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(
+        !empty($_POST['username'])
+        && !empty($_POST['server'])
+        && !empty($_POST['issue'])
+        && !empty($_POST['message'])
+    ){
+        $username = $_POST["username"];
+        $server = $_POST["server"];
+        $issue = $_POST["issue"];
+        $message = $_POST["message"];
+
+
+        $to = "bluecollarrust@gmail.com";
+        $subject = "BlueCollarRust.com Report Submission";
+        $body = "Name: {$username}\n\nServer: {$server}\n\nIssue Type: {$issue}\n\nMessage: {$message}";
+        $headers = "From: {$username}";
+
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo '<script language="javascript">';
+            echo 'alert("message successfully sent")';
+            echo '</script>';
+        } else {
+            echo '<script language="javascript">';
+            echo 'alert("message successfully sent")';
+            echo '</script>';
+            echo "Failed to send message.";
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -23,7 +58,7 @@
                 <a href="https://paypal.me/BlueCollarRust?country.x=US&locale.x=en_US">DONATE</a>
                 <a href="./servers.html">SERVERS</a>
                 <a href="https://discord.gg/Y3kqB49">DISCORD</a>
-                <a class="active" href="./report.html">REPORT</a>
+                <a class="active" href="./report.php">REPORT</a>
             </div>
         </div>
         <div class="page-cont">
@@ -41,16 +76,6 @@
                         </div> 
                         <p><br />However, you can also fill out the form below to report a player's behavior or to report a problem.</p>
                     </span><br />
-                    <form method="post" action="sendmail.php">
-
-                        <textarea name="message"></textarea>
-                        
-                        <input type="submit">
-                        
-                        </form>
-                    
-                    
-                    <!--
                     <div class="report-form">
                         <form class="contact-form" method="post" action="sendmail.php">
                             <div class="form-row form-error" style="display:none;"></div>
@@ -83,7 +108,7 @@
                             </div>
                             <button type="submit">Submit</button>
                         </form>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="right-col">
