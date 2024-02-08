@@ -180,24 +180,28 @@ a, a:visited {
 
 .server-feat{
     width:60%;
-    flex: 1 1 600px;
+    flex: 1 1 400px;
 }
 
 .server-banner{
     text-align: center;
     padding: 1em;
     width:40%;
-    flex: 1 1 400px;
+    flex: 1 1 300px;
     min-width: none;
 }
 
-.ul, li {
+ul {
+    padding: 0 0 0 10;
+}
+
+li {
     font-family: Roboto;
     font-size: 14px;
     margin: 1em;
     padding: 0;
     line-height: 18px;
-    margin: 2px;
+    margin: 2px 20px 2px 0px;
 }
 
 .footer {
@@ -317,5 +321,7 @@ button {
             line-height:10px;
             letter-spacing: 2px;
         }
-    
+    .server-banner{
+        display:none;
+    }
 }
