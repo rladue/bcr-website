@@ -1,9 +1,8 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(
         !empty($_POST['username'])
-        && !empty($_POST['server'])
-        && !empty($_POST['issue'])
         && !empty($_POST['message'])
     ){
         $username = $_POST["username"];
@@ -19,9 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         if (mail($to, $subject, $body, $headers)) {
-            echo "Report sent successfully!";
+            echo '<script language="javascript">';
+            echo 'alert("Message successfully sent")';
+            echo '</script>';
         } else {
-            echo "Failed to send message.";
+            echo '<script language="javascript">';
+            echo 'alert("Failed to send message")';
+            echo '</script>';
         }
     }
 }
