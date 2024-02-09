@@ -76,37 +76,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
                         </div> 
                         <p><br />However, you can also fill out the form below to report a player's behavior or to report a problem.</p>
-                    </span><br />
+                    </span>
                     <div class="report-form">
                         <form class="contact-form" method="POST" action="report.php">
-                            <div class="form-row form-error" style="display:none;"></div>
-                            <div class="form-row">
-                              <label for="contact-form-name">Your Username:</label>
+                              <label class="form-input" for="contact-form-name">Your Username:</label>
                                 <input  placeholder="Steam Username" id="contact-form-name" class="form-input" type="text" name="username" required>
-                            </div>
-                            <div class="form-row">
-                                <label for="server">Server:</label>
-                                <select name="server" id="server" required>
-                                    <option value="">--- Select a server ---</option>
-                                    <option value="original">Original PvPvE</option>
-                                    <option value="lite">Lite PvE</option>
-                                    <option value="brickyard">Brickyard PvP</option>
-                                    <option value="reserved">Reserved Sandbox/Build</option>
+                                <label class="form-input" for="server">Server:</label>
+                                <select class="form-input" name="server" id="server" required>
+                                    <option class="form-input" value="">--- Select a server ---</option>
+                                    <option class="form-input" value="original">Original PvPvE</option>
+                                    <option class="form-input" value="lite">Lite PvE</option>
+                                    <option class="form-input" value="brickyard">Brickyard PvP</option>
+                                    <option class="form-input" value="reserved">Reserved Sandbox/Build</option>
                                 </select>
-                            </div>
-                            <div class="form-row">
-                                <label for="issue">Issue:</label>
-                                <select name="issue" id="issue" required>
-                                    <option value="">--- Select an option ---</option>
-                                    <option value="behavior">Player(s) Behavior</option>
-                                    <option value="glitch">Problem / Glitch</option>
-                                    <option value="other">Other</option>
+                                <label class="form-input" for="issue">Issue:</label>
+                                <select class="form-input" name="issue" id="issue" required>
+                                    <option class="form-input" value="">--- Select an option ---</option>
+                                    <option class="form-input" value="behavior">Player(s) Behavior</option>
+                                    <option class="form-input" value="glitch">Problem / Glitch</option>
+                                    <option class="form-input" value="other">Other</option>
                                 </select>
-                            </div>
-                            <div class="form-row">
-                                <label for="contact-form-message">Message:</label>
+                                <label class="form-input" for="contact-form-message">Message:</label>
                             <textarea placeholder="Describe the issue" id="contact-form-message" class="form-input" name="message" required></textarea>
-                            </div>
+
                             <button type="submit">Submit</button>
                         </form>
                     </div>

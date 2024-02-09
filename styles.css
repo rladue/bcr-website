@@ -254,21 +254,29 @@ li {
     display:flex;
     justify-content: center;
 }
+
 .contact-form{
     display: flex;
     flex-direction: column;
+    row-gap: 0;
     padding-bottom: 1em;
     font-family: Roboto, sans-serif;
     font-size: 14px;
+    width: 100%;
+    align-items: center;
 }
 
-.form-row {
-    margin-bottom: 10px;
+.form-input {
+    width:50%;
+}
+
+label {
+    margin-top: 1em;
 }
 
 #contact-form-message {
-    width: 400px;
     float:inline-end;
+    height: 10em;
 }
 
 .form-error {
@@ -323,5 +331,10 @@ button {
         }
     .server-banner{
         display:none;
+    }
+
+    .form-input {
+        margin-bottom: 10px;
+        width:80%;
     }
 }
