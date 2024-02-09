@@ -250,44 +250,6 @@ li {
     margin: 1em;
 }
 
-.report-form{
-    display:flex;
-    justify-content: center;
-}
-
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0;
-    padding-bottom: 1em;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    width: 100%;
-    align-items: center;
-}
-
-.form-input {
-    width:50%;
-}
-
-label {
-    margin-top: 1em;
-}
-
-#contact-form-message {
-    float:inline-end;
-    height: 10em;
-}
-
-.form-error {
-    color: red;
-}
-
-button {
-    max-width:50px;
-    align-self: center;
-}
-
 
 @media screen and (max-width: 600px) {
     .banner {
@@ -331,10 +293,5 @@ button {
         }
     .server-banner{
         display:none;
-    }
-
-    .form-input {
-        margin-bottom: 10px;
-        width:80%;
     }
 }
