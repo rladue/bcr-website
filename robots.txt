@@ -2,6 +2,8 @@ User-agent: *
 Allow: /index.html
 Allow: /servers.html
 Allow: /report.html
+Allow: /sitemap.txt
+Allow: /robots.txt
 Disallow: /
 
 Sitemap: https://bluecollarrust.com/sitemap.txt
